@@ -5,25 +5,25 @@ provider "azurerm" {
   version = "=1.28.0"
 }
 resource "azurerm_resource_group" "appRG" {
-  name     = "TestingTerraform"
-  location = "East Asia"
+  name     = "${var.RGName}}"
+  location = "${var.RGLocation}"
 }
 
 resource "azurerm_app_service_plan" "appSP" {
-  name                = "PADSHOWCASEs"
-  location            = "${azurerm_resource_group.appRG.location}"
-  resource_group_name = "${azurerm_resource_group.appRG.name}"
+  name                = "${var.AppName}"
+  location            = "${var.RGName}"
+  resource_group_name = "${var.RGLocation}"
   kind                = "Linux"
   reserved            = "true"
 
   sku {
-    tier = "Premium V2"
-    size = "S1"
+    tier = "${var.skuTier}"
+    size = "${var.skuSize}"
   }
 }
 
 resource "azurerm_app_service" "appS" {
-  name                = "TestAPP123432"
+  name                = "${var.AppName}"
   location            = "${azurerm_resource_group.appRG.location}"
   resource_group_name = "${azurerm_resource_group.appRG.name}"
   app_service_plan_id = "${azurerm_app_service_plan.appSP.id}"

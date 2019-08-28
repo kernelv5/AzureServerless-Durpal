@@ -5,12 +5,12 @@ provider "azurerm" {
   version = "=1.28.0"
 }
 resource "azurerm_resource_group" "appRG" {
-  name     = "${var.RGName}}"
+  name     = "${var.RGName}"
   location = "${var.RGLocation}"
 }
 
 resource "azurerm_app_service_plan" "appSP" {
-  name                = "${var.AppName}"
+  name                = "${var.AppSPName}"
   location            = "${var.RGName}"
   resource_group_name = "${var.RGLocation}"
   kind                = "Linux"

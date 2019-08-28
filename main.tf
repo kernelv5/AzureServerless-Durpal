@@ -11,8 +11,8 @@ resource "azurerm_resource_group" "appRG" {
 
 resource "azurerm_app_service_plan" "appSP" {
   name                = "${var.AppSPName}"
-  location            = "${var.RGName}"
-  resource_group_name = "${var.RGLocation}"
+  location            = "${azurerm_resource_group.appRG.location}"
+  resource_group_name = "${azurerm_resource_group.appRG.name}"
   kind                = "Linux"
   reserved            = "true"
 

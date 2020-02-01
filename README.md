@@ -42,4 +42,4 @@ Prerequisites
         Database_Server_Connection_Details = {
           "Connection_HostName" = "**********.mysql.database.azure.com"
           "DatabaseName" = "********"
-          "Database_Password" = "********"cd mo
+          "Database_Password" = "********"

@@ -25,6 +25,21 @@ Prerequisites
 4. Tested under Terraform v0.12.9. 
 5. Open ./variables file and setup the information.
 6. Create one Storage account and Create a folder under blob.
-7. Select Storage account go > Shared access signature > Generate SAS > Copy SAS token 
+7. Select Storage account go > Shared access signature > Generate SAS > Copy SAS token
 
+## Execution 
 
+terraform init
+terraform plan
+terraform apply
+
+# Once Complte you will see some output.
+
+Apply complete! Resources: 2 added, 0 changed, 1 destroyed.
+
+Outputs:
+
+Database_Server_Connection_Details = {
+  "Connection_HostName" = "**********.mysql.database.azure.com"
+  "DatabaseName" = "********"
+  "Database_Password" = "********"cd mo

@@ -1,0 +1,2 @@
+variable "RGName" {}
+variable "RGLocation" {}

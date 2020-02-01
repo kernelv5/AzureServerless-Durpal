@@ -1,12 +1,13 @@
-
 variable "RGName" {}
 variable "RGLocation" {}
 variable "DBSName" {}
-
 variable "DBSKU_name" {}
 variable "DBSKU_Capacity" {}
 variable "DBSKU_Tier" {}
 variable "DBSKU_Family" {}
+
+variable "InitDBName" {}
+
 
 
 variable "sp_storage" {}
@@ -17,5 +18,3 @@ variable "admin_user" {}
 variable "admin_login" {}
 variable "dbversion" {}
 variable "dbSSLenf" {}
-variable "DBName" {}
-

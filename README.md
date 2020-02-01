@@ -18,14 +18,14 @@ This Terraform code designed to deploy a Drupal Server less deployment under Azu
 
         # Note : Packages information can be change from ./variables.tf file DBSKU_name,DBSKU_Capacity,DBSKU_Tier,      DBSKU_Family,sp_storage.
 
-Prerequisites
-1. Create one Resource Group. ( Because of Safety purpose i recommand this way )
-2. User must have Contributor access for that particular resources group. 
-3. Execute using Azure CloudShell or use az clie and login.
-4. Tested under Terraform v0.12.9. 
-5. Open ./variables file and setup the information.
-6. Create one Storage account and Create a folder under blob.
-7. Select Storage account go > Shared access signature > Generate SAS > Copy SAS token
+## Prerequisites
+        1. Create one Resource Group. ( Because of Safety purpose i recommand this way )
+        2. User must have Contributor access for that particular resources group. 
+        3. Execute using Azure CloudShell or use az clie and login.
+        4. Tested under Terraform v0.12.9. 
+        5. Open ./variables file and setup the information.
+        6. Create one Storage account and Create a folder under blob.
+        7. Select Storage account go > Shared access signature > Generate SAS > Copy SAS token
 
 ## Execution 
 

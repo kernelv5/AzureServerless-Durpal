@@ -29,17 +29,17 @@ Prerequisites
 
 ## Execution 
 
-terraform init
-terraform plan
-terraform apply
+        terraform init
+        terraform plan
+        terraform apply
 
-# Once Complte you will see some output.
+## Once Complte you will see some output.
 
-Apply complete! Resources: 2 added, 0 changed, 1 destroyed.
+        Apply complete! Resources: 2 added, 0 changed, 1 destroyed.
 
-Outputs:
+        Outputs:
 
-Database_Server_Connection_Details = {
-  "Connection_HostName" = "**********.mysql.database.azure.com"
-  "DatabaseName" = "********"
-  "Database_Password" = "********"cd mo
+        Database_Server_Connection_Details = {
+          "Connection_HostName" = "**********.mysql.database.azure.com"
+          "DatabaseName" = "********"
+          "Database_Password" = "********"cd mo

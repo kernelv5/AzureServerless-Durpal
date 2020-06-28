@@ -17,6 +17,7 @@ resource "azurerm_app_service" "appS" {
   resource_group_name = "${var.RGName}"
   app_service_plan_id = "${azurerm_app_service_plan.appSP.id}"
   https_only          = true
+  
 
   site_config {
     linux_fx_version = "DOCKER|drupal:latest"
@@ -26,20 +27,22 @@ resource "azurerm_app_service" "appS" {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "true"
   }
 
-connection_string {
-    name  = "Database"
-    type  = "MySQL"
-    value = "${var.DatabaseConf}"
-  }
-
   backup {
       name = "${var.AppName}"
       enabled = "1"
       storage_account_url = "${var.backupStorage}"
       schedule {
         frequency_interval = "1"
+        keep_at_least_one_backup = "true"
         frequency_unit = "Day"
+        retention_period_in_days = "30"
         }
+  }
+
+  connection_string {
+    name  = "Database"
+    type  = "MySQL"
+    value = "${var.DatabaseConf}"
   }
 }
 
